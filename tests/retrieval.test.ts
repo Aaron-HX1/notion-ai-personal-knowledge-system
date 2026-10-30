@@ -1,0 +1,3 @@
+import {it,expect} from 'vitest';import {ask} from '../src/retrieval.js';
+it('returns no-evidence response without model call',async()=>{const db={query:async()=>({rows:[]})} as any;const ai={synthesize:async()=>{throw new Error('not called');}} as any;expect((await ask(db,ai,'missing topic')).citations).toEqual([]);});
+it('rejects invented citation numbers',async()=>{const db={query:async()=>({rows:[{notion_id:'id',notion_url:'https://notion.so/id',title:'alpha guide',summary:'alpha',body:'alpha evidence',tags:[]}]})} as any;const ai={synthesize:async()=> 'Supported [1] and invented [99].'} as any;const result=await ask(db,ai,'alpha');expect(result.citations).toHaveLength(0);expect(result.answer).toContain('无法核验');});

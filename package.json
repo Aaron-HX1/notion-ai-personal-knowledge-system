@@ -1,0 +1,47 @@
+{
+  "name": "notion-ai-personal-knowledge-system",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "worker": "node dist/worker.js",
+    "migrate": "tsx src/migrate.ts",
+    "test": "vitest run",
+    "check": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.900.0",
+    "@aws-sdk/s3-request-presigner": "^3.900.0",
+    "@electric-sql/pglite": "^0.3.16",
+    "@fastify/multipart": "^9.2.0",
+    "@fastify/rate-limit": "^10.3.0",
+    "cheerio": "^1.1.2",
+    "dotenv": "^17.2.0",
+    "fastify": "^5.6.0",
+    "mammoth": "^1.11.0",
+    "openai": "^6.6.0",
+    "pdf-parse": "^2.4.5",
+    "pg": "^8.16.3",
+    "undici": "^7.30.1",
+    "yauzl": "^3.2.0",
+    "yazl": "^3.3.1",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.0",
+    "@types/pg": "^8.15.0",
+    "@types/yauzl": "^2.10.3",
+    "@types/yazl": "^3.3.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.4"
+  },
+  "packageManager": "pnpm@11.25.0"
+}

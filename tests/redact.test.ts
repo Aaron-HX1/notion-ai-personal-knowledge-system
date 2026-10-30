@@ -1,0 +1,2 @@
+import {it,expect} from 'vitest';import {safeError} from '../src/redact.js';
+it('redacts credentials from errors',()=>{const c={API_TOKEN:'secret-token-123456789',NOTION_TOKEN:'notion-secret-123',OPENAI_API_KEY:'openai-secret-123',S3_ACCESS_KEY_ID:'access-123',S3_SECRET_ACCESS_KEY:'s3-secret-123',DATABASE_URL:'postgresql://user:pass@host/db'} as any;const message=safeError(new Error('failed openai-secret-123 and postgresql://user:pass@host/db'),c);expect(message).not.toContain('openai-secret-123');expect(message).not.toContain('user:pass');});

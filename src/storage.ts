@@ -1,0 +1,14 @@
+import {S3Client,PutObjectCommand,GetObjectCommand,DeleteObjectCommand} from '@aws-sdk/client-s3';
+import {getSignedUrl} from '@aws-sdk/s3-request-presigner';
+import {mkdir,readFile,writeFile,unlink} from 'node:fs/promises';
+import {resolve,dirname,sep,isAbsolute} from 'node:path';
+import {createHmac,timingSafeEqual} from 'node:crypto';
+import type {Config} from './config.js';
+export class Storage {private s?:S3Client;constructor(private c:Config){if(c.STORAGE_BACKEND==='s3'){if(!c.S3_ENDPOINT||!c.S3_BUCKET||!c.S3_ACCESS_KEY_ID||!c.S3_SECRET_ACCESS_KEY||[c.S3_ENDPOINT,c.S3_ACCESS_KEY_ID,c.S3_SECRET_ACCESS_KEY].some(v=>v.includes('replace')||v.includes('example.')))throw new Error('S3 配置不完整');this.s=new S3Client({endpoint:c.S3_ENDPOINT,region:c.S3_REGION,credentials:{accessKeyId:c.S3_ACCESS_KEY_ID,secretAccessKey:c.S3_SECRET_ACCESS_KEY},forcePathStyle:true});}}
+ private path(key:string){if(!key||isAbsolute(key)||key.split(/[\\/]/).includes('..'))throw new Error('对象路径无效');const root=resolve(this.c.LOCAL_STORAGE_DIR);const path=resolve(root,key);if(!path.startsWith(root+sep))throw new Error('对象路径越界');return path;}
+ async put(key:string,bytes:Buffer,type='application/octet-stream'){if(this.c.STORAGE_BACKEND==='local'){const p=this.path(key);await mkdir(dirname(p),{recursive:true,mode:0o700});await writeFile(p,bytes,{mode:0o600});return;}await this.s!.send(new PutObjectCommand({Bucket:this.c.S3_BUCKET,Key:key,Body:bytes,ContentType:type}));}
+ async get(key:string){if(this.c.STORAGE_BACKEND==='local')return readFile(this.path(key));const r=await this.s!.send(new GetObjectCommand({Bucket:this.c.S3_BUCKET,Key:key}));return Buffer.from(await r.Body!.transformToByteArray());}
+ async signed(key:string){if(this.c.STORAGE_BACKEND==='local'){this.path(key);const expires=Math.floor(Date.now()/1000)+this.c.DOWNLOAD_TTL_SECONDS;const sig=this.sign(key,expires);return `${this.c.PUBLIC_BASE_URL||`http://127.0.0.1:${this.c.PORT}`}/api/storage/download?${new URLSearchParams({key,expires:String(expires),sig})}`;}return getSignedUrl(this.s!,new GetObjectCommand({Bucket:this.c.S3_BUCKET,Key:key}),{expiresIn:this.c.DOWNLOAD_TTL_SECONDS});}
+ verify(key:string,expires:number,sig:string){if(this.c.STORAGE_BACKEND!=='local'||!Number.isSafeInteger(expires)||expires<Math.floor(Date.now()/1000)||expires>Math.floor(Date.now()/1000)+this.c.DOWNLOAD_TTL_SECONDS)return false;try{this.path(key);const actual=Buffer.from(this.sign(key,expires),'hex'),given=Buffer.from(sig,'hex');return actual.length===given.length&&timingSafeEqual(actual,given);}catch{return false;}}
+ private sign(key:string,expires:number){return createHmac('sha256',this.c.API_TOKEN).update(key+'\n'+expires).digest('hex');}
+ async delete(key:string){if(this.c.STORAGE_BACKEND==='local')return unlink(this.path(key));await this.s!.send(new DeleteObjectCommand({Bucket:this.c.S3_BUCKET,Key:key}));}}

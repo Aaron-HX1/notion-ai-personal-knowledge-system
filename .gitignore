@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+coverage/
+work/
+outputs/
+data/
+__pycache__/
+*.pyc
+.tools/
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+.DS_Store

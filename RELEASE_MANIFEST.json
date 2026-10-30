@@ -1,0 +1,632 @@
+{
+  "format": "knowledgebot-source-release/v1",
+  "version": "1.0.0",
+  "created_at": "2026-10-30T14:15:37.186Z",
+  "files": [
+    {
+      "path": ".dockerignore",
+      "sha256": "4889cd742e6e8a25e2e9be10e29538c2e5faec565281ba09163bf0b95c3774b6",
+      "bytes": 115,
+      "mode": 420
+    },
+    {
+      "path": ".env.example",
+      "sha256": "7821c3c1e430559e1fbe3d8c3df8acafa6507ee8d95f7bcf5fc916683ff28d0f",
+      "bytes": 2550,
+      "mode": 420
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "fc3c30ee1410e747611b3c536fed2972c306319658fa07ff7c97374178c987ce",
+      "bytes": 411,
+      "mode": 420
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "7aa5715b83b326ae0c5f847867c730e68f4463a106aaa1f0b1e1264e90867e78",
+      "bytes": 146,
+      "mode": 420
+    },
+    {
+      "path": "DEPLOY_GUIDE.html",
+      "sha256": "61cefb596ccd26e63aa7edfeb3d77c84b5b2a37c67231034ed359e4a8a7cd053",
+      "bytes": 14540,
+      "mode": 420
+    },
+    {
+      "path": "DEPLOY_GUIDE.md",
+      "sha256": "d2ad5b14a1f0afe9f931f14449bb5ecce5268f007a55c6b62b32c8f70150fefa",
+      "bytes": 11214,
+      "mode": 420
+    },
+    {
+      "path": "Dockerfile",
+      "sha256": "40bec9a8bfefa15064e8014ebe6832860a468ffdd633e83bca8519b4313197a6",
+      "bytes": 655,
+      "mode": 420
+    },
+    {
+      "path": "KnowledgeBot.command",
+      "sha256": "2b6d0aeaa46ededcf7fb0b10bd2f65199f75e322a702d9cf67764b1f12252e97",
+      "bytes": 546,
+      "mode": 493
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "ccede5d5ffd26860940f8b57ab3e90b24140ef8df07e97dd93c5a06460c80c47",
+      "bytes": 1082,
+      "mode": 420
+    },
+    {
+      "path": "README.md",
+      "sha256": "4d5820669a96a610c5644c73301c19055a9d0ac044804e8509cda5231105dc3e",
+      "bytes": 5093,
+      "mode": 420
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "529c65da9a04bbe1ab17d15f7a3f505cb15cf20f4b058c9d56947b6def7bc53c",
+      "bytes": 597,
+      "mode": 420
+    },
+    {
+      "path": "docs/USER_GUIDE.md",
+      "sha256": "b8bec5b5817225bb1903f4b78a6b441106c12da63a6dfbdf75081ff8fec30468",
+      "bytes": 19503,
+      "mode": 420
+    },
+    {
+      "path": "docs/api.md",
+      "sha256": "cf01f06b8567122861a3d4cc1198157dd46d02775dd28f8f935e91ff705a8f16",
+      "bytes": 5672,
+      "mode": 420
+    },
+    {
+      "path": "docs/deploy.md",
+      "sha256": "4df008d0f98a960619cb99ff1e4ea4e42faf89caa28c0b418afe73171d494be3",
+      "bytes": 2620,
+      "mode": 420
+    },
+    {
+      "path": "docs/notion-setup.md",
+      "sha256": "0234c91f02c022199987ba086d8e2dc76b0b20d0af81e9f6c576668c89415d3b",
+      "bytes": 2290,
+      "mode": 420
+    },
+    {
+      "path": "docs/operations.md",
+      "sha256": "4a104efa68f967ae580cf8cd8700c4ee2a852f97c82f6f4f3a773b0b6afa7822",
+      "bytes": 1735,
+      "mode": 420
+    },
+    {
+      "path": "install-and-run.command",
+      "sha256": "8c4eb3f0d641c19dfe41b80f587d1bcf44484dfe40d9dc44e1441828f9ea821f",
+      "bytes": 70,
+      "mode": 493
+    },
+    {
+      "path": "migrations/001_init.sql",
+      "sha256": "8c3ae7fc8b289e0109489b4f45ec7b31c14bb95c05bdfdb73cd3e8164b5e25a1",
+      "bytes": 1738,
+      "mode": 420
+    },
+    {
+      "path": "migrations/002_perf.sql",
+      "sha256": "1063533197e81eca51fe6612155743031ac38c8f9c7bfa3a87baa64bca01609e",
+      "bytes": 574,
+      "mode": 420
+    },
+    {
+      "path": "migrations/003_review.sql",
+      "sha256": "668d9d29681f769ea44af1ac5d12d98f5193c3e0688c56bfc27c05df1890ba04",
+      "bytes": 878,
+      "mode": 420
+    },
+    {
+      "path": "migrations/004_learning.sql",
+      "sha256": "a5f465781af37c64e902d0a7708d913e21daa2225ec2ee55d63fadf419522061",
+      "bytes": 423,
+      "mode": 420
+    },
+    {
+      "path": "package.json",
+      "sha256": "e6bedbaff6a1a433949909b5d9a6368903af6ae6527f433846e80c28c1602ba3",
+      "bytes": 1158,
+      "mode": 420
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "sha256": "9843140f5e8af2e9ddabed360fe2cf15fde3c79775a6c702b576652855c2935a",
+      "bytes": 77980,
+      "mode": 420
+    },
+    {
+      "path": "pnpm-workspace.yaml",
+      "sha256": "ac02d96368617c760f093cfe61fdec64b6244007ab3553e0d6621f706f54a353",
+      "bytes": 29,
+      "mode": 420
+    },
+    {
+      "path": "public/ICONS-LICENSE.txt",
+      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+      "bytes": 3208,
+      "mode": 420
+    },
+    {
+      "path": "public/app.js",
+      "sha256": "5eee6a013d0aaca7f511eb7a8a3e44216ed86b8d8fae049b3e3d0b164c0a722b",
+      "bytes": 43993,
+      "mode": 420
+    },
+    {
+      "path": "public/guide-assets/config-example.svg",
+      "sha256": "7d2a9545c48d29e5c967522038168da60b7af46db5b4d80158f116ff165fe779",
+      "bytes": 943,
+      "mode": 420
+    },
+    {
+      "path": "public/guide-assets/notion-setup.svg",
+      "sha256": "4fe9ba7773c0d66326a538d55d180f989bc402e365e4aefe4232c4e39a6238a0",
+      "bytes": 1668,
+      "mode": 420
+    },
+    {
+      "path": "public/guide-assets/setup-flow.svg",
+      "sha256": "01a6623ec0d985f4479500e755ad07ff71e4c1e37adef5510b6fc360dad4f9af",
+      "bytes": 1909,
+      "mode": 420
+    },
+    {
+      "path": "public/icon.svg",
+      "sha256": "63a95a7e51d0994dc997ce154d34760f36391f8a27e3b6cc46bdacf7ab7d1b7b",
+      "bytes": 198,
+      "mode": 420
+    },
+    {
+      "path": "public/icons.svg",
+      "sha256": "9c79cead258eb8393f76a2e3a1e652bb89b365ca90d6d0571ce5c7d612dd260b",
+      "bytes": 4772,
+      "mode": 420
+    },
+    {
+      "path": "public/index.html",
+      "sha256": "6ae0e6d88e1df707672e6631bbba7b286ab9ea45cbe224d7f5ec766fbc0f4832",
+      "bytes": 29896,
+      "mode": 420
+    },
+    {
+      "path": "public/manifest.webmanifest",
+      "sha256": "59625c58b5aee4a1964d428a31449bb8438b7a345676b080862f8a11c03335c2",
+      "bytes": 252,
+      "mode": 420
+    },
+    {
+      "path": "public/markdown.js",
+      "sha256": "d534ef9a9205603144dbc61984f5bd3079e62b818ff0d2127d868d4ec669be4d",
+      "bytes": 2583,
+      "mode": 420
+    },
+    {
+      "path": "public/styles.css",
+      "sha256": "2650f3a07b58ede93fd20d8e169552b06ac128237156c754b293dc216c25fbc9",
+      "bytes": 36829,
+      "mode": 420
+    },
+    {
+      "path": "public/trend-chart.js",
+      "sha256": "8d13ea9b9b70352d6e6e539463bf2b9fb8f12266a34d9a24c451ad9259d3e5a8",
+      "bytes": 2468,
+      "mode": 420
+    },
+    {
+      "path": "render.yaml",
+      "sha256": "1a4b3044ed95b27730ee9a10d3ea70c35f17c7727811685834980cc2c26cbc10",
+      "bytes": 2090,
+      "mode": 420
+    },
+    {
+      "path": "run-local.command",
+      "sha256": "ffa9868efe9848ba6e43531e5c5e3bc38b71099dfd0fd104c131d7f82e6da23d",
+      "bytes": 77,
+      "mode": 493
+    },
+    {
+      "path": "scripts/benchmark-local.mjs",
+      "sha256": "f651c47dbe9635d8cd07cf98d25b16d3fc06fb1bf529c3f0e7c5f2c4a9a1d91b",
+      "bytes": 2970,
+      "mode": 420
+    },
+    {
+      "path": "scripts/build-deploy-guide.mjs",
+      "sha256": "1fb318409e36f91a3ba080eda65c2a16ed5961ad54277ce1f0b2741ebdd2fb4e",
+      "bytes": 1414,
+      "mode": 420
+    },
+    {
+      "path": "scripts/install-and-run.mjs",
+      "sha256": "5715b1db9cc789c9b2c8ef13bff795b90276d6552a78a921b000c86ac71aa9da",
+      "bytes": 4189,
+      "mode": 420
+    },
+    {
+      "path": "scripts/kb.py",
+      "sha256": "61387f82fff7f8a4df16498fc1243ad79b1973e7aee299ef155d4db3070bfda7",
+      "bytes": 8128,
+      "mode": 420
+    },
+    {
+      "path": "scripts/ocr.swift",
+      "sha256": "a3d12f1c92fb658db2ebeb0ed3d9b79b998092ae49d3c06afb4a5968bdbe2321",
+      "bytes": 729,
+      "mode": 420
+    },
+    {
+      "path": "scripts/package-release.mjs",
+      "sha256": "5f7ac15e9affb3b6a081ff1531d833dfcd36132b8ca37c60f4e536f323f36862",
+      "bytes": 5058,
+      "mode": 420
+    },
+    {
+      "path": "scripts/start-local.mjs",
+      "sha256": "9f9c169e350f7dcfdb789421763eb292d5a1fba31e313f1bf895ca456b201616",
+      "bytes": 6399,
+      "mode": 420
+    },
+    {
+      "path": "scripts/supervisor.mjs",
+      "sha256": "75c00d132d3187fe45afb1f70c543a5657f3d7cca7e4bb87d6902cb96a5eb88a",
+      "bytes": 779,
+      "mode": 420
+    },
+    {
+      "path": "src/ai.ts",
+      "sha256": "353210cbadbfb51ebca60167ffb0ea1c2503bee2b4ef7ac68a1a3ca039bcc8f0",
+      "bytes": 8002,
+      "mode": 420
+    },
+    {
+      "path": "src/archive.ts",
+      "sha256": "22cde54a3ae9f5c01188005ee064c37b60f61dd2f6584503b0865355d027a0ab",
+      "bytes": 5234,
+      "mode": 420
+    },
+    {
+      "path": "src/collections.ts",
+      "sha256": "41392a2d387d05f36e2529422bd1b36e45c6a55b5328b673ff7360b4b1dbb72e",
+      "bytes": 1451,
+      "mode": 420
+    },
+    {
+      "path": "src/concurrency.ts",
+      "sha256": "d6b52d059f4018c1042aba8f501d622b07120619029fcf54be8cdb56347bcd64",
+      "bytes": 441,
+      "mode": 420
+    },
+    {
+      "path": "src/config-store.ts",
+      "sha256": "2026041e00e3cbbef64748f25e6482a42b01b5fd8acfaf24b30c55280b310ebb",
+      "bytes": 3886,
+      "mode": 420
+    },
+    {
+      "path": "src/config.ts",
+      "sha256": "c250a36c67d42164e149b2b9fbed6dd17d9b1ace3fb148a945a3107be4abc993",
+      "bytes": 3477,
+      "mode": 420
+    },
+    {
+      "path": "src/db.ts",
+      "sha256": "e2b0504b5972f4118beae015cb4e7392a92dee778b9c13ab40dc2257c34cc946",
+      "bytes": 1590,
+      "mode": 420
+    },
+    {
+      "path": "src/extract.ts",
+      "sha256": "c87d401297c0cb27fe47bb22130d0624b0602e4fe223a5b09095c4715b055442",
+      "bytes": 3901,
+      "mode": 420
+    },
+    {
+      "path": "src/importer.ts",
+      "sha256": "4f3c1ac1346f9c22cc747926d6580405b252c2ab883cfc1d58b785dba71ccabf",
+      "bytes": 5912,
+      "mode": 420
+    },
+    {
+      "path": "src/lazy-db.ts",
+      "sha256": "931e1809054e081907486ce75c64c16873dca4970343d26ad533e18dd89694d1",
+      "bytes": 764,
+      "mode": 420
+    },
+    {
+      "path": "src/llm-provider.ts",
+      "sha256": "5eaaa4db3e232595b34c164f371615fffc01e60896e866765cb47b330f0fa405",
+      "bytes": 5034,
+      "mode": 420
+    },
+    {
+      "path": "src/local-ocr.ts",
+      "sha256": "e3c102c6bb08ecd04941696b92d8d001237788e99e613c69d8024dece428b9f4",
+      "bytes": 1917,
+      "mode": 420
+    },
+    {
+      "path": "src/local-settings.ts",
+      "sha256": "59741a283e6ceefd033e43893d437cb5009ee2c3dfe9304739950104a7d8aacc",
+      "bytes": 2625,
+      "mode": 420
+    },
+    {
+      "path": "src/migrate.ts",
+      "sha256": "4f635a81c54cb3704270ffe69daaa910d68f2cd41fdc8503d91f61aec859ce71",
+      "bytes": 231,
+      "mode": 420
+    },
+    {
+      "path": "src/notifications.ts",
+      "sha256": "e59870627cbe2676084b658b5c20ed2716a7fd9b77ebb5b32489c214f29a2804",
+      "bytes": 1478,
+      "mode": 420
+    },
+    {
+      "path": "src/notion-bootstrap.ts",
+      "sha256": "4e4d21e152ebebc366b95c3bd1313b7c20f13d58b279bf70c01c5c2daacf0d88",
+      "bytes": 3644,
+      "mode": 420
+    },
+    {
+      "path": "src/notion-parent.ts",
+      "sha256": "71ca7307e2144f9b6725e4f7d4ae85911ce4d50224c0d6076b3b4b879fca6a9a",
+      "bytes": 656,
+      "mode": 420
+    },
+    {
+      "path": "src/notion.ts",
+      "sha256": "94a0792200e693d279b1441362b1e5a4ac1902eac71736e4ad7bffa2b2c23d39",
+      "bytes": 6647,
+      "mode": 420
+    },
+    {
+      "path": "src/redact.ts",
+      "sha256": "c245ba397f38e51f25da328f9cd95a788c5c561a4a5468c90dd99d6af17c2013",
+      "bytes": 387,
+      "mode": 420
+    },
+    {
+      "path": "src/resource-operations.ts",
+      "sha256": "fb0af6d42aa93119b865eacdda9c093216e0befea5f78284ade6e65e18c4a1db",
+      "bytes": 754,
+      "mode": 420
+    },
+    {
+      "path": "src/retrieval.ts",
+      "sha256": "c72ee75d48d32a5de3a79d0cf0cee4e1fbb179f45f82b83497c7b3cd25ddb0a3",
+      "bytes": 1979,
+      "mode": 420
+    },
+    {
+      "path": "src/review.ts",
+      "sha256": "25e79f19b90113e9d3b1aed9f19f0b2ce694175029fa2033135158a64244c489",
+      "bytes": 5601,
+      "mode": 420
+    },
+    {
+      "path": "src/schema.ts",
+      "sha256": "b1afa4101bc4034d714646342e1d8c5f7a28697a713ba3384599fed8c1b8f48d",
+      "bytes": 340,
+      "mode": 420
+    },
+    {
+      "path": "src/security.ts",
+      "sha256": "19adbe958848db7b7e53d4cbbcc90c154fe913b4b6f0bb53db7fdaf69e4f8957",
+      "bytes": 4758,
+      "mode": 420
+    },
+    {
+      "path": "src/server.ts",
+      "sha256": "c43265a65ca8252d0c0faa324ac17ecddf40f71876a2b36b4117358ac4f103c0",
+      "bytes": 34384,
+      "mode": 420
+    },
+    {
+      "path": "src/storage.ts",
+      "sha256": "a4874de2c10622406ca3c24827bdf6bbb88f663b971c74d27e65ea6ba96c78da",
+      "bytes": 2910,
+      "mode": 420
+    },
+    {
+      "path": "src/sync.ts",
+      "sha256": "c68ab749175c676f9ddb0961fe5f322af3c422be8c915e79e5f0ae6907f4e844",
+      "bytes": 3346,
+      "mode": 420
+    },
+    {
+      "path": "src/ui-auth.ts",
+      "sha256": "ade5c91397d69791073bd7a2fef84ce61082f2a0ea7ca6a96b88161187e357d4",
+      "bytes": 909,
+      "mode": 420
+    },
+    {
+      "path": "src/ui-cache.ts",
+      "sha256": "17559e7de8f660bccda1c9a880947c45b4f88e98e2e0f186fa7b8a59f7fcc840",
+      "bytes": 1138,
+      "mode": 420
+    },
+    {
+      "path": "src/worker-loop.ts",
+      "sha256": "78d36c8246ae4fbb444e40dbbdf9ed24ff9b5a77afb0bc0188733c73b6bd0f04",
+      "bytes": 3355,
+      "mode": 420
+    },
+    {
+      "path": "src/worker.ts",
+      "sha256": "b072aed18e030d04cfa4c72984133bff24ff4f2bbe46a65c66acfc2f153a5780",
+      "bytes": 180,
+      "mode": 420
+    },
+    {
+      "path": "start.command",
+      "sha256": "49b19242c052d2247dd45f9cedf36ed3aaa6bb3db6b7adb0e2e6c2fb9ec938a7",
+      "bytes": 832,
+      "mode": 493
+    },
+    {
+      "path": "tests/ai-file.test.ts",
+      "sha256": "ddae13e528ec16f58dd6521b51773c573b70513bd71e59aa64752467dcc83154",
+      "bytes": 1281,
+      "mode": 420
+    },
+    {
+      "path": "tests/archive.test.ts",
+      "sha256": "61a25fa529bd54c6fe9c70950dff9429dd7d573578f10fccb2ee74fb86cc9f86",
+      "bytes": 865,
+      "mode": 420
+    },
+    {
+      "path": "tests/auth.test.ts",
+      "sha256": "32aac9040b0c6e5a96cd43c03028fa0690e973cdac991fbffff48ad2b73ed4d1",
+      "bytes": 555,
+      "mode": 420
+    },
+    {
+      "path": "tests/bootstrap.test.ts",
+      "sha256": "3a91604b1afd0b5c3a73782298ee7f517c67f6e8e289cfc899d869eef17a4863",
+      "bytes": 2940,
+      "mode": 420
+    },
+    {
+      "path": "tests/concurrency.test.ts",
+      "sha256": "824ea7b9d18a4ae39f62b30e702f7cb9ea8e8b38a682b4adba3a6775b3747208",
+      "bytes": 413,
+      "mode": 420
+    },
+    {
+      "path": "tests/config-persistence.test.ts",
+      "sha256": "2a30551fb485e6b0101622dc8108d435940910d9ac10fe2e81a4a4d0c774595c",
+      "bytes": 4214,
+      "mode": 420
+    },
+    {
+      "path": "tests/fetch-retry.test.ts",
+      "sha256": "164c2f5d2d43b22efd24fbcc85aff7f09848612d2f118201db434351847180d1",
+      "bytes": 1608,
+      "mode": 420
+    },
+    {
+      "path": "tests/guide.test.ts",
+      "sha256": "8ec3b7b31751b7131e31de49e7d0c491d449450fff382cb77077ff3f442b8be8",
+      "bytes": 845,
+      "mode": 420
+    },
+    {
+      "path": "tests/importer.test.ts",
+      "sha256": "b79f7283b83681cae9e06c8a1d973d7f81ff0d0f082071c0be0c42738abf42ad",
+      "bytes": 1429,
+      "mode": 420
+    },
+    {
+      "path": "tests/local-settings.test.ts",
+      "sha256": "4ea32616ad5cda2fbe17325ae23b8bf3219fb971bd6f74d00fd9951d5fc88eff",
+      "bytes": 1590,
+      "mode": 420
+    },
+    {
+      "path": "tests/local.test.ts",
+      "sha256": "2c3c55793e2ca9250df58b2086be09065955c98097c933358d60f79b33b13455",
+      "bytes": 2646,
+      "mode": 420
+    },
+    {
+      "path": "tests/notion-review-schema.test.ts",
+      "sha256": "39ceaceba2bf568c0259e5ed60d90cced3984464d10c199bb914f529e0cd461f",
+      "bytes": 1337,
+      "mode": 420
+    },
+    {
+      "path": "tests/notion.test.ts",
+      "sha256": "5cfb8f2fb17302dc2362a4eb55d35d5b23ff26464ac12577166a831afb3ea8e5",
+      "bytes": 1560,
+      "mode": 420
+    },
+    {
+      "path": "tests/provider.test.ts",
+      "sha256": "3ac4519e85e669606921706484ae7968378b5e27908639987595b9cdb379e1f8",
+      "bytes": 4304,
+      "mode": 420
+    },
+    {
+      "path": "tests/redact.test.ts",
+      "sha256": "9a75ab755cd501a408695a659a52deb8bd3a0d51b959d079e3999d01dc003820",
+      "bytes": 550,
+      "mode": 420
+    },
+    {
+      "path": "tests/release.test.ts",
+      "sha256": "1a241fe8182cbedcf9f862570ae6f822e2d0b78e04f30cd4e644f5398be4b06a",
+      "bytes": 2267,
+      "mode": 420
+    },
+    {
+      "path": "tests/resource-operations.test.ts",
+      "sha256": "f28c2f44b7def8918ab1fbc3afe098c5dd9e0e38189c286e726c7302fb69df0d",
+      "bytes": 2071,
+      "mode": 420
+    },
+    {
+      "path": "tests/retrieval.test.ts",
+      "sha256": "89235eddb162febe5ed4942f559d6be20bb8c8acc57598402073578bcf0f9e5e",
+      "bytes": 737,
+      "mode": 420
+    },
+    {
+      "path": "tests/review.test.ts",
+      "sha256": "ddc170ea8be1a45607da76941e9f0aab522a1fb6fc0a18fc44994b2e60ccdc6d",
+      "bytes": 4135,
+      "mode": 420
+    },
+    {
+      "path": "tests/security.test.ts",
+      "sha256": "da7fa349407774693b6addf9a5bf7a7327e5f5eefdfa5da73e74818cabd85cbf",
+      "bytes": 941,
+      "mode": 420
+    },
+    {
+      "path": "tests/startup-performance.test.ts",
+      "sha256": "1c6d8c9abe8e3f5de3d11584ba5ad64388c6dd9b68784019c38a39854b5afb92",
+      "bytes": 4323,
+      "mode": 420
+    },
+    {
+      "path": "tests/sync.test.ts",
+      "sha256": "eef68cf7a3e314824c2c7bfbd57146ff912411f2ca54809bc4d6b215a69d63d7",
+      "bytes": 1430,
+      "mode": 420
+    },
+    {
+      "path": "tests/trend-chart.test.ts",
+      "sha256": "bcfb483477cea6c67522455659c402350ce94ec8afa3b840e5ef6e6c18fa20ce",
+      "bytes": 720,
+      "mode": 420
+    },
+    {
+      "path": "tests/ui-auth.test.ts",
+      "sha256": "8886cf6c2e5b5357fce6b7ab56bc53e6fe685b98183489677a71d05a9546b3e9",
+      "bytes": 987,
+      "mode": 420
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "eecde1503c6b059878d4bbadf0aecb511a979916b42807701bc91c712ee84c19",
+      "bytes": 230,
+      "mode": 420
+    },
+    {
+      "path": "vitest.config.ts",
+      "sha256": "71bd47648b4d6bee71eb2e67100f33aaf46f5dda7ea90e23745b8dce196d17ec",
+      "bytes": 114,
+      "mode": 420
+    }
+  ],
+  "excluded": "Credentials, instance documents, runtime data, node_modules, dist, work, outputs and temporary files"
+}

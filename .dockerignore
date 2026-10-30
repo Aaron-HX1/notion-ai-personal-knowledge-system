@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+node_modules
+outputs
+work
+.git
+.github
+coverage
+dist
+data
+.tools
+*.sqlite
+*.db
+.DS_Store

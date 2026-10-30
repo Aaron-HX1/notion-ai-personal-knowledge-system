@@ -59,8 +59,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "4d5820669a96a610c5644c73301c19055a9d0ac044804e8509cda5231105dc3e",
-      "bytes": 5093,
+      "sha256": "f8f028cc0b0dc06919eeac4e76ac00118cdccf18530cea9b6f425991ad124b02",
+      "bytes": 5782,
       "mode": 420
     },
     {
@@ -97,6 +97,12 @@
       "path": "docs/operations.md",
       "sha256": "4a104efa68f967ae580cf8cd8700c4ee2a852f97c82f6f4f3a773b0b6afa7822",
       "bytes": 1735,
+      "mode": 420
+    },
+    {
+      "path": "docs/项目功能与版本日志_v1.1_2026-10-30_22-25.md",
+      "sha256": "0cd46501187193a0b7c18ff119a842edc5699ea75e10e88dfac3774902690708",
+      "bytes": 8369,
       "mode": 420
     },
     {
